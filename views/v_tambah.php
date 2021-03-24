@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Praktikum 19, By Fadli Mahesa</title>
+    <title>Praktikum 20, By Fadli Mahesa</title>
     <link rel="stylesheet" type="text/css" href="assets/ale.css">
 </head>
 <body>

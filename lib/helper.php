@@ -2,7 +2,7 @@
     session_start();
 
     function base_url (){
-        return "http://localhost/pwpb/Praktikum19/";
+        return "http://localhost/pwpb/Praktikum20/";
         
     }
 

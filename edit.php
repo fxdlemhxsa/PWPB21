@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $kelas = $_POST['kelas'];
     $jurusan = $_POST['jurusan'];
     $alamat = $_POST['alamat'];
-    $gol_darah = @$_POST['gol_darah'];
+    $gol_darah = $_POST['gol_darah'];
     $nama_ortu = $_POST['nama_ortu'];
     
     $file = $_POST['foto'];
