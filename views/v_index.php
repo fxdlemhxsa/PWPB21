@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Praktikum 20, By Fadli Mahesa XI RPL 3</title>
+    <title>Praktikum 21, By Fadli Mahesa XI RPL 3</title>
 
     <script type="text/javascript" src="assets/media/js/jquery.min.js"></script>
     <script type="text/javascript" src="assets/media/js/bootstrap.min.js"></script>
@@ -79,7 +79,7 @@
                 <td><?= $siswa['nis']; ?></td>
                 <td><?= $siswa['nama_lengkap']; ?></td>
                 <td><?= $siswa['jenis_kelamin']; ?></td>
-                <td><?= $siswa['kelas']; ?></td>
+                <td><?= $siswa['nama_kelas']; ?></td>
                 <td><?= $siswa['jurusan']; ?></td>
                 <td><?= $siswa['alamat']; ?></td>
                 <td><?= $siswa['gol_darah']; ?></td>
@@ -92,8 +92,8 @@
                     <?php } ?>
                 </td>
                 <td>
-                <a href="edit.php?nis=<?= $siswa["nis"]; ?>" class="btn btn-warning">Edit</a>
-                    <a class="btn btn-danger btnDelete" href="delete.php?nis=<?= $siswa["nis"]; ?>">Delete</a></td>
+                <a href="edit.php?nis=<?= $siswa["nis"]; ?>" class="btn badge primary btn-warning">Edit</a>
+                    <a class="btn badge danger btn-danger btnDelete" href="delete.php?nis=<?= $siswa["nis"]; ?>">Delete</a></td>
                 </td> 
             </tr>
             <?php } ?>
@@ -119,7 +119,6 @@
         </div>
 
       </div>
-
       <script type="text/javascript">
         console.log("testing");
             $(function() {

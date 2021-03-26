@@ -6,8 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nis = $_POST['nis'];
     $nama_lengkap = $_POST['nama_lengkap'];
     $jenis_kelamin = $_POST['jenis_kelamin'];
-    $kelas = $_POST['kelas'];
-    $jurusan = $_POST['jurusan'];
+    $kelas = $_POST['id_kelas'];
     $alamat = $_POST['alamat'];
     $gol_darah = $_POST['gol_darah'];
     $nama_ortu = $_POST['nama_ortu'];
@@ -30,8 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $sql = "UPDATE siswa SET
                 nama_lengkap = '$nama_lengkap',
                 jenis_kelamin = '$jenis_kelamin',
-                kelas = '$kelas',
-                jurusan = '$jurusan',
+                id_kelas = '$kelas',
                 alamat = '$alamat',
                 gol_darah = '$gol_darah',
                 nama_ortu = '$nama_ortu',
@@ -51,6 +49,9 @@ if (empty($nis)) header('location: index.php');
 $sql = "SELECT * FROM siswa WHERE nis = '$nis'";
 $query = $mysqli->query($sql);
 $siswa = $query->fetch_array();
+
+$sql3 = "SELECT * FROM kelas";
+$dataKelas = $mysqli->query($sql3) or die($mysqli->error);
 
 if (empty($siswa)) header('location: index.php');
 
