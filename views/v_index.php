@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Praktikum 21, By Fadli Mahesa XI RPL 3</title>
+    <title>Praktikum 22, By Fadli Mahesa XI RPL 3</title>
 
     <script type="text/javascript" src="assets/media/js/jquery.min.js"></script>
     <script type="text/javascript" src="assets/media/js/bootstrap.min.js"></script>

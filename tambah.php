@@ -2,14 +2,21 @@
 include 'lib/library.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $nis = $_POST['nis'];
-    $nama_lengkap = $_POST['nama_lengkap'];
-    $jenis_kelamin = $_POST['jenis_kelamin'];
-    $kelas = $_POST['id_kelas'];
-    $alamat = $_POST['alamat'];
-    $gol_darah = $_POST['gol_darah'];
-    $nama_ortu = $_POST['nama_ortu'];
-    $foto = $_FILES['foto'];
+    $nis = @$_POST['nis'];
+    $nama_lengkap = @$_POST['nama_lengkap'];
+    $jenis_kelamin = @$_POST['jenis_kelamin'];
+    $kelas = @$_POST['id_kelas'];
+    $alamat = @$_POST['alamat'];
+    $gol_darah = @$_POST['gol_darah'];
+    $nama_ortu = @$_POST['nama_ortu'];
+    $foto = @$_FILES['foto'];
+
+    if(empty($nis)){
+      flash('error','Mohon masukkan NIS');
+    } else if (empty($nama_lengkap)) {
+      flash('error','Mohon masukkan Nama Lngkap');
+    }
+    else{
 
     if (!empty($foto) && $foto['error'] == 0) {
         $path = './assets/images/';
@@ -28,7 +35,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $mysqli->query($sql) or die($mysqli->error);
 
     header("location:index.php");
+  }
 }
+
+$success = flash('success');
+$error = flash('error');
+
 //Ambil data kelas
 $sql = "SELECT * FROM kelas";
 $dataKelas = $mysqli->query($sql) or die($mysqli->error);
